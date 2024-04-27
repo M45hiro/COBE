@@ -14,5 +14,6 @@ python app.py
 ### 权利声明：
 
 除部分开源引用外，本项目所使用的后端算法与web前端均由本项目自主开发实现，所采用的开源引用如下：<br>
-- yolov8-plate: [paper]()<br>
+- Chinese_license_plate_detection_recognition: [github](https://github.com/we0091234/Chinese_license_plate_detection_recognition)/[paper](https://arxiv.org/abs/1506.02640)<br>
+- 字符识别：[paper](https://arxiv.org/abs/1507.05717)
 - 加载条css素材：[CSS-Loaders](https://css-loaders.com)

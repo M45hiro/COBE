@@ -1,11 +1,9 @@
-# COBE
-Complex-circumstance Object-recognition Based on image-Enhancement
-# COBE：复杂环境车牌识别系统
+# COBE：复杂环境车牌识别系统(Complex-circumstance Object-recognition Based on image-Enhancement, COBE)
 
 ### 测试：
 
 在COBE/COBE文件夹下执行以下命令以启动服务端
-`python app.py`
+`    python app.py`
 然后在Liveserver中打开COBE.html以打开web前端
 
 **注意**

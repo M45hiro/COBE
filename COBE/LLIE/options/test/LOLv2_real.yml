@@ -1,0 +1,27 @@
+### must be same as
+name: test_chepai
+suffix: ~  # add suffix to saved images
+model: ll_dataset
+distortion: sr
+scale: 1
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: ~
+
+datasets:
+  test:  # the 1st test dataset
+    name: test
+    dataroot_GT: dataset/LOLv2/Real_captured/Test/Normal
+    dataroot_LQ: dataset/LOLv2/Real_captured/Test/Low
+
+
+#### network structures
+network_G:
+  which_model_G: FourLLIE_Ycbcr_change
+  # FourLLIE_Ycbcr_changessh
+  nf: 64  # 64 #16 32 # 64
+
+#### path
+path:
+  root: ./chepai
+  pretrain_model_G: save_new/lolv2/experiments/train/models/59000_G.pth
+

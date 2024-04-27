@@ -1,0 +1,33 @@
+### must be same as
+name: test
+suffix: ~  # add suffix to saved images
+model: ll_dataset
+distortion: sr
+scale: 1
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+
+datasets:
+  test:  # the 1st test dataset
+    name: test
+    dataroot_GT: dataset/LOLdataset/eval15/high
+    # dataset/LSRW/Eval/Huawei/high
+    dataroot_LQ: dataset/LOLdataset/eval15/low
+    # dataset/LSRW/Eval/Huawei/low
+
+#### network structures
+network_G:
+  which_model_G: FourLLIE
+  nf: 32 #16 32 # 64
+
+#### path
+path:
+  root: ./
+  pretrain_model_G: save_model_v1/bestpsnr_32_kpjh/bestmodel/1000_G.pth
+  # save_model_v1/bestpsnr_32_kpjh/models/91000_G.pth
+  # save_model_v1/bestpsnr_orj/train/models/61000_G.pth
+  # save_model_v1/bestpsnr_kpjh/26000_G.pth
+  # newexperiments/experiments/train_archived_231225-092743/models/88000_G.pth
+  # experiments/train_archived_231122-002224/models/93000_G.pth
+  # experiments/train_archived_231220-113255/models/46000_G.pth
+  # newexperiments/experiments/train_archived_231226-000737/models/42000_G.pth

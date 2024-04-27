@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COBE-Complex-circumstance Object-recognition Based on image-Enhancement</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <!-- Page container -->
+        <div id="container">
+            <!-- Toggle buttons -->
+            <div id="toggleButtons">
+                <div class="toggleButton active" onclick="showPage(1)"></div>
+                <div class="toggleButton" onclick="showPage(2)"></div>
+                <div class="toggleButton" onclick="showPage(3)"></div>
+            </div>
+            
+            <!-- Page 1: Original Image -->
+            <div id="page1" class="page active">
+                <div id="imageContainer1">
+                    <img id="uploadedImage" src="" alt="Uploaded Image">
+                    <div class="loader" id="loader"></div> 
+                    <div id="detailBox1"></div>
+                </div>
+                <input type="file" id="fileInput" style="display: none;">
+                <button id="uploadButton">上传图片</button>
+                <button id="processButton">增强&识别</button>
+            </div>
+            
+            <!-- Page 2: Enhanced Image -->
+            <div id="page2" class="page">
+                <div id="imageContainer2">
+                    <img id="enhancedImage" src="" alt="Enhanced Image">
+                    <div id="detailBox2"></div>
+                </div>
+                <button id="uploadButton">上传图片</button>
+                <button id="processButton">增强&识别</button>
+            </div>
+            
+            <!-- Page 3: Recognized Text -->
+            <div id="page3" class="page">
+                <div id="imageContainer3">
+                    <img id="recImage" src="" alt="Rec Image">
+                    <div id="detailBox3"></div>
+                </div>
+                <div id="recContainer">
+                    <div id="recognizedText"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvasPreview" width="400" height="400" style="display: none; border: 4px dashed #999; border-radius: 20px;"></canvas>
+    
+<script src="script.js"></script>
+</body>
+</html>

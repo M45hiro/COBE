@@ -1,0 +1,186 @@
+/* CSS for toggle buttons */
+#toggleButtons {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -40px; /* Adjust as needed */
+}
+
+.toggleButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ccc; /* Default button color */
+}
+
+.toggleButton.active {
+    background-color: black; /* Active button color */
+}
+
+/* CSS for pages */
+/* CSS for pages */
+.page {
+    text-align: center;
+    display: none;
+    opacity: 0; /* Initially hide the pages */
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+}
+
+.page.active {
+    display: block;
+    opacity: 1; /* Show the active page with full opacity */
+}
+
+
+/* Common styles for containers */
+#container {
+    text-align: center;
+    border: 5px solid #ccc;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Original and Enhanced Image Container */
+#imageContainer1 {
+    width: 500px;
+    height: 500px;
+    border: 3px dashed #999;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    pointer-events : auto;
+}
+#imageContainer2 {
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 3px dashed #999;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+#imageContainer3 {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 3px dashed #999;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+#recContainer {
+    width: 300;
+    height: 77px;
+    border: 3px dashed #999;
+    border-radius: 15px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Buttons */
+#uploadButton, #processButton {
+    padding: 20px 40px;
+    font-size: 32px;
+    cursor: pointer;
+    background-color: #e7e7eb;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#uploadedImage {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+#enhancedImage {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+#recImage {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+/* Detail box */
+#detailBox1 {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#detailBox2 {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#detailBox3 {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#recognizedText{
+    font-family: "微软雅黑";
+    font-size: 30px;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    transform: scale(1.3);
+    display:none;
+    position: absolute;
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+    z-index: 1;
+  }
+
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+      33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+      66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+      100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+  }
+  
